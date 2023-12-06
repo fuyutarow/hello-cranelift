@@ -1,0 +1,8 @@
+function %add(i32, i32) -> i32 fast {
+    block0(v0: i32, v1: i32):
+        v2 = iadd v0, v1
+        return v2
+}
+
+;print: %add(1, 2)
+;run: %add(1, 2) == 3
