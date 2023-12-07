@@ -49,7 +49,7 @@ pub fn main() -> Result<()> {
     let options = &mut Options::default();
     // options.path = Path::new("add.clif");
     options.print = true;
-    options.files.push(PathBuf::from("add.clif"));
+    options.files.push(PathBuf::from("clif-samples/add.clif"));
     options.target = "x86_64-linux-android".to_string();
     options.output = Some(PathBuf::from("add.o"));
     dbg!(&options);

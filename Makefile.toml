@@ -19,3 +19,13 @@ clif-util compile add.clif -o out.o --target aarch64-apple-darwin
 clif-util compile add.clif -o out.o --target s390x-unknown-linux-gnu
 clif-util compile add.clif -o out.o --target riscv64gc-unknown-none-elf
 '''
+
+[tasks."run:jit"]
+script = '''
+cargo run --bin hi_jit
+'''
+
+[tasks."run:obj"]
+script = '''
+cargo run --bin toy
+'''
