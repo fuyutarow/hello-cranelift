@@ -1,0 +1,13 @@
+cargo-features = ["codegen-backend"]
+
+[workspace]
+
+[package]
+edition = "2021"
+name = "rust-clif"
+version = "0.1.0"
+
+[profile.dev]
+codegen-backend = "cranelift"
+
+[dependencies]

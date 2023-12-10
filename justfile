@@ -22,3 +22,17 @@ run-obj:
 
 run-hello:
     cargo run --example hello
+
+clif-json:
+    cargo install cranelift-serde
+    clif-json serialize clif-samples/add.clif
+
+
+install-cargo-clif:
+    rustup install nightly-x86_64-apple-darwin
+    rustup component add rustc-codegen-cranelift-preview --toolchain nightly-x86_64-apple-darwin
+
+    git clone https://github.com/rust-lang/rustc_codegen_cranelift
+    cd rustc_codegen_cranelift
+    cargo build
+    ./rustc_codegen_cranelift/target/cargo-clif
